@@ -2,7 +2,7 @@
 
     'use strict';
 
-    var PetalContainer, Petal, _randomGenerator,
+    var PetalJs, Petal, _randomGenerator,
         _defaultOptions = {
             numPetals: 50,
             maxVel: 2,
@@ -60,8 +60,8 @@
         ctx.restore();
     }
 
-    //PetalContainer Constructor
-    PetalContainer = function(id, options) {
+    //PetalJs Constructor
+    PetalJs = function(id, options) {
         this._canvas = document.getElementById(id);
         this.ctx = this._canvas.getContext('2d');
         this.canvasWidth = this.ctx.canvas.width;
@@ -71,7 +71,7 @@
         this.init();
     }
 
-    PetalContainer.prototype.init = function() {
+    PetalJs.prototype.init = function() {
         //Generate Petals
         for (var i = 0; i < this.options.numPetals; i++) {
             var initialX = Math.random() * this.canvasWidth;
@@ -84,7 +84,7 @@
         requestAnimationFrame(this.draw.bind(this));
     }
 
-    PetalContainer.prototype.draw = function() {
+    PetalJs.prototype.draw = function() {
         this.ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight, this.options);
 
         for (var i = 0; i < this.petals.length; i++) {
@@ -101,6 +101,6 @@
         return num;
     }
 
-    window.PetalContainer = PetalContainer;
+    window.PetalJs = PetalJs;
 
 })(window)
