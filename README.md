@@ -1,6 +1,9 @@
 # PetalJs
 PetalJs is recreation of <http://www.jqueryscript.net/animation/jQuery-Plugin-For-Sakura-Petals-Falling-Animation-Sakura.html> using html5 canvas and requestAnimationFrame.
 
+## Demo
+<https://jbpark0509.github.io/petal.html>
+
 ## Installation
 
 1. Download petal.js and include it in your project. Then PetalJs will be available in your window object as window.PetalJs!
